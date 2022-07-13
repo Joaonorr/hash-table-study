@@ -105,7 +105,7 @@ public:
     // Saída: "True" se K está na Tabela T, "False" caso contrário
     // Requisito: Tabela T deve ser uma tabela de encadeamento aberto
     static bool BuscaTD(Tabela T, Dispersao dispersao, int chave) {
-        for (int i{0}; i < T.capacidade; i++) {
+        for (int i{0}; i < T.capacidade - 1; i++) {
             int posicao = dispersao(chave, T.capacidade);
             if (T.ocupado[posicao] == true) {
                 if (T.objeto[posicao] == chave) {
